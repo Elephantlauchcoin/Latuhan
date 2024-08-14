@@ -1,0 +1,665 @@
+/* Reset some basic styles */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #FFFFFF; /* Light text */
+    line-height: 1.6;
+    font-size: 1rem; /* Base font size */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem; /* Adjust font size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.8rem; /* Adjust font size for phones */
+    }
+}
+
+/* Atur Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    border-bottom: 2px;
+    z-index: 1000;
+    background-color: transparent; /* Transparan awal */
+    transition: background-color 0.3s ease /* Transisi halus untuk perubahan warna */
+}
+
+/* Gaya untuk saat header digulir */
+header.scrolled {
+    background-color: #1e1e1e; /* Warna gelap saat scroll */
+}
+/* Header Container */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Header Left Icons */
+.header-left-icons {
+    display: flex;
+    align-items: center;
+   gap: 15px;
+    margin-top: 5px;/* Jarak antar ikon di kiri */
+}
+
+/* Menurunkan dan membesarkan ikon profil */
+.header-left-icons a.profile-icon {
+    margin-top: 10px; /* Menurunkan ikon profil */
+    font-size: 2rem; /* Membesarkan ikon profil */
+}
+
+/* Header Right Icons */
+.header-right-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 5px;/* Jarak antar ikon di kanan */
+}
+
+/* Gaya untuk ikon */
+.header-left-icons a,
+.header-right-icons a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.header-left-icons a:hover,
+.header-right-icons a:hover {
+    color: #FFD700;
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 10px; /* Jarak antara input pencarian dan ikon pencarian */
+}
+
+/* Input Pencarian */
+.search-container input[type="text"] {
+    padding: 5px 40px 5px 40px; /* Padding kanan dan kiri diperbesar untuk memberi ruang bagi ikon pencarian */
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    outline: none;
+    color: #1e1e1e; /* Warna teks input pencarian */
+    background-color: transparent; /* Latbelakang transparan */
+    width: 250px; /* Sesuaikan lebar sesuai kebutuhan */
+    box-sizing: border-box; /* Memastikan padding dan border dimasukkan dalam lebar elemen */
+    transition: background-color 0.3s ease; /* Transisi halus untuk perubahan warna */
+}
+
+/* Gaya untuk saat header digulir */
+header.scrolled .search-container input[type="text"] {
+    background-color: #181010; /* Warna latar belakang saat header digulir */
+}
+
+/* Ikon Pencarian */
+.search-container a {
+    position: absolute;
+    left: 10px; /* Jarak dari sisi kiri container pencarian */
+    color: #f0efef; /* Warna ikon pencarian */
+    font-size: 10px;
+    cursor: pointer;
+}
+
+/* Responsif untuk perangkat mobile */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 15px;
+    }
+
+    .header-left-icons a,
+    .header-right-icons a {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        padding: 0 10px;
+    }
+
+    .header-left-icons a,
+    .header-right-icons a {
+        font-size: 1.2rem;
+    }
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    background-color: #1e1e1e;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #333;
+    padding: 0 10px; /* Padding untuk jarak dari sisi layar */
+}
+
+.bottom-nav ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    margin: 0;
+    list-style: none;
+}
+
+.bottom-nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+}
+
+.bottom-nav i {
+    font-size: 20px;
+}
+
+.bottom-nav a:hover {
+    color: #ffffff; /* Gold color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bottom-nav {
+        padding: 0 5px; /* Mengurangi padding untuk tablet */
+    }
+
+    .bottom-nav a {
+        font-size: 12px; /* Mengurangi ukuran font untuk tablet */
+    }
+
+    .bottom-nav i {
+        font-size: 18px; /* Mengurangi ukuran ikon untuk tablet */
+    }
+}
+
+@media (max-width: 480px) {
+    .bottom-nav {
+        padding: 0 2px; /* Mengurangi padding untuk ponsel */
+    }
+
+    .bottom-nav a {
+        font-size: 10px; /* Mengurangi ukuran font untuk ponsel */
+    }
+
+    .bottom-nav i {
+        font-size: 16px; /* Mengurangi ukuran ikon untuk ponsel */
+    }
+}
+
+/* Mengatur Jarak dari Atas */
+.market-icons {
+    padding-top: 20px; /* Memberikan jarak dari bagian atas */
+    margin-bottom: 20px; /* Jarak dari bagian bawah jika diperlukan */
+}
+
+/* Flexbox Layout */
+.market-icons-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+/* Link Styling */
+.market-icons a {
+    text-decoration: none;
+    color: #FFFFFF;
+    text-align: center;
+    width: auto;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    transition: color 0.3s ease;
+}
+
+.market-icons a:hover {
+    color: #FFD700;
+}
+
+/* Icon Styling */
+.market-icons i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+/* Teks */
+.market-icons span {
+    display: block;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .market-icons-row {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 480px) {
+    .market-icons-row {
+        justify-content: space-around;
+    }
+    
+    .market-icons i {
+        font-size: 22px;
+    }
+
+    .market-icons span {
+        font-size: 12px;
+    }
+}
+
+/* Styling untuk bagian Trending Coins */
+.coin-sedang {
+    padding: 10px;
+    background-color: #1a1a1a; /* Warna latar belakang */
+    border-radius: 12px; /* Membuat sudut kontainer lebih membulat */
+    overflow: hidden; /* Menyembunyikan bagian yang keluar dari batas kontainer */
+}
+
+.coin-sedang h2 {
+    margin: 0 0 10px 10px;
+    font-size: 20px;
+    color: #fff;
+    text-align: left;
+}
+
+.market-data {
+    display: flex;
+    overflow-x: auto; /* Izinkan scroll horizontal */
+    gap: 10px; /* Jarak antar item */
+    padding: 10px 0; /* Jarak vertikal untuk ruang tambahan */
+    scroll-snap-type: x mandatory; /* Efek snap pada scroll */
+}
+
+.market-item {
+    background-color: #333; /* Warna latar belakang gelap untuk kotak item */
+    border: 1px solid #555; /* Garis batas kotak dengan warna gelap */
+    border-radius: 12px; /* Membuat sudut kotak lebih membulat */
+    padding: 8px; /* Padding di dalam kotak */
+    flex: 0 0 auto; /* Ukuran tetap, tidak fleksibel */
+    width: 150px; /* Lebar tetap untuk setiap kotak */
+    box-sizing: border-box; /* Memastikan padding dan border termasuk dalam lebar kotak */
+    text-align: center; /* Menyelaraskan teks di tengah */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Efek bayangan lebih kecil */
+    scroll-snap-align: start; /* Efek snap untuk setiap kotak */
+}
+
+/* Styling untuk harga dan perubahan */
+.price-box {
+    margin-top: 8px; /* Jarak atas untuk kotak harga */
+}
+
+.price, .change {
+    margin: 4px 0; /* Jarak vertikal antara elemen di dalam kotak harga */
+    font-size: 14px; /* Ukuran font untuk harga dan perubahan */
+    transition: color 0.3s ease; /* Animasi perubahan warna */
+}
+
+.price {
+    font-size: 16px; /* Ukuran font untuk harga dolar */
+    font-weight: bold;
+    color: #00ff00; /* Warna hijau untuk harga dolar */
+}
+
+.currency {
+    font-size: 12px; /* Ukuran font untuk mata uang lokal */
+    color: #aaa; /* Warna gelap untuk mata uang lokal */
+}
+
+.change.increase {
+    color: #00ff00; /* Warna hijau untuk perubahan naik */
+}
+
+.change.decrease {
+    color: #ff0000; /* Warna merah untuk perubahan turun */
+}
+
+/* Responsif untuk perangkat mobile */
+@media (max-width: 768px) {
+    .market-item {
+        width: 120px; /* Lebar kotak lebih kecil pada perangkat kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .market-item {
+        width: 100px; /* Lebar kotak lebih kecil pada perangkat sangat kecil */
+    }
+}
+
+.announcement-container {
+    position: relative;
+    padding: 5px 0;
+    border-bottom: 2px solid #f3e936; /* Garis bawah */
+    overflow: hidden;
+    height: 30px; /* Tinggi container */
+}
+
+.static-elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.static-elements i {
+    font-size: 16px; /* Ukuran ikon lebih kecil */
+    color: white;
+}
+
+.menu-link {
+    color: white;
+    text-decoration: none;
+}
+
+.scrolling-text-container {
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    width: calc(100% - 40px); /* Menyesuaikan lebar dengan jarak antara ikon */
+    left: 20px; /* Jarak dari ikon menu */
+    clip-path: inset(0 20px 0 0); /* Memotong bagian kanan untuk menyelaraskan teks dengan ikon */
+}
+
+.scrolling-text {
+    position: absolute;
+    white-space: nowrap;
+    color: #333;
+    font-size: 14px; /* Ukuran teks lebih kecil */
+    text-align: center;
+    animation: scroll-left 10s linear infinite;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Media query untuk layar lebih kecil */
+@media (max-width: 768px) {
+    .static-elements i {
+        font-size: 14px; /* Ukuran ikon lebih kecil pada layar menengah */
+    }
+
+    .scrolling-text {
+        font-size: 12px; /* Ukuran teks lebih kecil pada layar menengah */
+    }
+
+    .scrolling-text-container {
+        width: calc(100% - 30px); /* Menyesuaikan lebar pada layar lebih kecil */
+        left: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .static-elements {
+        padding: 3px;
+    }
+
+    .scrolling-text-container {
+        height: 25px;
+        width: calc(100% - 20px); /* Lebar lebih kecil lagi */
+        left: 10px;
+    }
+
+    .scrolling-text {
+        font-size: 10px; /* Ukuran teks lebih kecil pada layar kecil */
+    }
+
+    .static-elements i {
+        font-size: 12px; /* Ukuran ikon lebih kecil pada layar kecil */
+    }
+}
+
+.main {
+  border-radius: 15px; /* Atur radius sesuai kebutuhan */
+  background-color: #333; /* Contoh warna latar belakang */
+  padding: 20px; /* Padding untuk jarak di dalam elemen */
+  margin: 10px; /* Margin untuk jarak di luar elemen */
+}
+
+/* Atur jarak dan gaya untuk elemen dalam konten utama */
+main section {
+    margin-bottom: 30px; /* Jarak antar bagian */
+}
+
+/* Konten utama untuk perangkat kecil */
+@media (max-width: 767px) {
+    .content-box {
+        padding: 15px;
+    }
+}
+
+/* Slider Container */
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 280px; /* Sesuaikan tinggi slider sesuai kebutuhan */
+}
+
+/* Slides Container */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+/* Each Slide */
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+/* Slide Images */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan gambar mengisi ruang dan tidak terdistorsi */
+}
+
+/* Navigation Buttons */
+.navigation-manual {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.manual-btn {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.manual-btn:hover, 
+input[name="radio-btn"]:checked + .manual-btn {
+    background-color: #FFD700;
+}
+
+/* Radio Buttons - Hide Default */
+input[type="radio"] {
+    display: none;
+}
+
+/* For Mobile Devices */
+@media (max-width: 768px) {
+    .manual-btn {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* For Smaller Devices */
+@media (max-width: 480px) {
+    .manual-btn {
+        width: 8px;
+        height: 8px;
+    }
+}
+    
+/* Gaya dasar untuk tabel coin */
+.tabel-coin {
+    margin: 20px auto;
+    max-width: 100%;
+    padding: 7px;
+    border-radius: 0px;
+    background-color: #333;
+}
+
+.coin-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    overflow-x: auto; /* Menambahkan scroll horizontal jika tidak cukup ruang */
+    white-space: nowrap; /* Mencegah pembungkusan teks pada tab */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling untuk perangkat mobile */
+}
+
+.tab {
+    flex-shrink: 0; /* Memastikan semua tab berjajar tanpa mengecilkan ukuran */
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tab:hover {
+    background-color: #91b300;
+}
+
+.tab.active {
+    background-color: #00b313;
+}
+
+/* Responsif */
+@media screen and (max-width: 768px) {
+    .tab {
+        padding: 8px 10px; /* Mengurangi padding di perangkat kecil */
+        font-size: 12px; /* Ukuran font lebih kecil pada layar kecil */
+    }
+}
+
+/* Mengatur tampilan tabel */
+.coin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.coin-table th,
+.coin-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+}
+
+.coin-table th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+
+.coin-table td {
+    vertical-align: middle;
+}
+
+.coin-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.volume-usd {
+    font-size: 14px;
+    color: #666;
+    display: block;
+    margin-top: 5px;
+}
+
+.price-cell .price-usd {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+}
+
+.price-cell .price-local {
+    font-size: 14px;
+    color: #666;
+    display: block;
+    margin-top: 5px;
+}
+
+.change-cell .change-box {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    color: white;
+    background-color: #28a745;
+    border-radius: 5px;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .coin-table th, 
+    .coin-table td {
+        padding: 10px 8px;
+        font-size: 14px;
+    }
+
+    .coin-name {
+        font-size: 14px;
+    }
+
+    .price-cell .price-usd, 
+    .price-cell .price-local {
+        font-size: 14px;
+    }
+
+    .change-cell .change-box {
+        font-size: 14px;
+        padding: 5px;
+    }
+}
